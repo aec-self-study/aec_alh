@@ -10,4 +10,4 @@ GROUP BY
 	customer_id,
 	name,
 	email
-ORDER BY first_order_at limit 5;
+ORDER BY first_order_at limit 5
