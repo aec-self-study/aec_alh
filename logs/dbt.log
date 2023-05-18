@@ -9,3 +9,25 @@
 [0m19:39:27.450995 [info ] [MainThread]: Profile coffee_shop_alh written to /home/vscode/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
 [0m19:39:27.451836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f277d8cdcc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f277b4a9c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f277b4aa560>]}
 [0m19:39:27.452337 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-05-18 19:40:25.493816 | 257e8f1b-fe00-47fe-b82c-4ce0d283a682 ==============================
+[0m19:40:25.493816 [info ] [MainThread]: Running with dbt=1.4.6
+[0m19:40:25.496431 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/vscode/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m19:40:25.496805 [debug] [MainThread]: Tracking: tracking
+[0m19:40:25.499775 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fea44aae020>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fea44aaf5b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fea44aad090>]}
+[0m19:40:25.518949 [debug] [MainThread]: checksum: 0325e47f1211ebbdb24627f81d8289d705fdb573380364d07ab35982cb3d57cd, vars: {}, profile: None, target: None, version: 1.4.6
+[0m19:40:25.519819 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m19:40:25.520780 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '257e8f1b-fe00-47fe-b82c-4ce0d283a682', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fea44aafb80>]}
+[0m19:40:26.344202 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.coffee_shop_alh
+[0m19:40:26.349955 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '257e8f1b-fe00-47fe-b82c-4ce0d283a682', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fea44c03b20>]}
+[0m19:40:26.356165 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '257e8f1b-fe00-47fe-b82c-4ce0d283a682', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fea44c002b0>]}
+[0m19:40:26.356599 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 336 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m19:40:26.357036 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '257e8f1b-fe00-47fe-b82c-4ce0d283a682', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fea44ed4070>]}
+[0m19:40:26.358089 [info ] [MainThread]: 
+[0m19:40:26.358761 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m19:40:26.359332 [debug] [MainThread]: Command end result
+[0m19:40:26.365157 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fea44c00370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fea44a03b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fea44a00400>]}
+[0m19:40:26.365503 [debug] [MainThread]: Flushing usage events
