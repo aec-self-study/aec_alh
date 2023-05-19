@@ -1,13 +1,20 @@
-SELECT 
-	orders.customer_id AS customer_id,
-	customers.name AS name,
-	customers.email AS email,
-	MIN(orders.created_at) AS first_order_at,
-	COUNT(orders.created_at) AS nr_of_orders
-FROM `analytics-engineers-club.coffee_shop.customers` AS customers
-INNER JOIN `analytics-engineers-club.coffee_shop.orders` AS orders ON customers.id=orders.customer_id
-GROUP BY 
-	customer_id,
-	name,
-	email
-ORDER BY first_order_at limit 5
+
+
+with customer_orders as (
+    select
+        customer_id
+        , count(*) as n_orders
+        , min(created_at) as first_order_at
+    from `analytics-engineers-club`.`coffee_shop`.`orders`
+    group by 1
+)
+
+select 
+    customers.id as customer_id
+    , customers.name
+    , customers.email
+    , coalesce(customer_orders.n_orders, 0) as n_orders
+    , customer_orders.first_order_at
+from `analytics-engineers-club`.`coffee_shop`.`customers` as customers 
+left join customer_orders
+    on id = customer_orders.customer_id
