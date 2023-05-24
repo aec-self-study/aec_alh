@@ -28,7 +28,7 @@ end as state,
 --
 issues.created_at as opened_at,
 issues_merged.merged_at, 
-date_diff(issues.created_at, issues_merged.merged_at, hour) / 24.0 as days_open_to_merge
+date_diff(issues_merged.merged_at, issues.created_at, hour) / 24.0 as days_open_to_merge
 
 from pull_request as pull_requests
 
