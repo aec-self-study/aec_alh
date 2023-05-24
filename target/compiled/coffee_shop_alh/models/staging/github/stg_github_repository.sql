@@ -9,7 +9,7 @@ with source as (
 renamed as (
 
     select
-        id,
+        id as repo_id,
         _fivetran_synced,
         archived,
         created_at,
