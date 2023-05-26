@@ -209,3 +209,43 @@ ORDER BY first_order_at limit 5;
 [0m19:52:01.293526 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
 [0m19:52:01.294123 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f302627e260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3022aabe80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3022db7430>]}
 [0m19:52:01.294784 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-05-26 14:23:52.595580 | 8b690cbd-abed-43f7-826c-2d3716f48abf ==============================
+[0m14:23:52.595580 [info ] [MainThread]: Running with dbt=1.4.6
+[0m14:23:52.601794 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/vscode/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'parse_only': False, 'which': 'compile', 'rpc_method': 'compile', 'indirect_selection': 'eager'}
+[0m14:23:52.602328 [debug] [MainThread]: Tracking: tracking
+[0m14:23:52.615470 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f38de2cd000>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f38de2cf550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f38de2ccfd0>]}
+[0m14:23:52.637506 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f38de340460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f38de340430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f38de3404f0>]}
+[0m14:23:52.638113 [debug] [MainThread]: Flushing usage events
+[0m14:23:52.761091 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Failed to read package: Runtime Error
+    no dbt_project.yml found at expected path /workspaces/aec_alh/dbt_packages/dbt_utils/dbt_project.yml
+
+Error encountered in /workspaces/aec_alh/dbt_packages/dbt_utils
+
+
+============================== 2023-05-26 14:24:28.879155 | 9dbc1da7-f47f-4c72-b197-cee584dc17e7 ==============================
+[0m14:24:28.879155 [info ] [MainThread]: Running with dbt=1.4.6
+[0m14:24:28.880708 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/vscode/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'deps', 'rpc_method': 'deps', 'indirect_selection': 'eager'}
+[0m14:24:28.881035 [debug] [MainThread]: Tracking: tracking
+[0m14:24:28.885401 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff93c5700d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff93c570550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff93c570130>]}
+[0m14:24:28.886075 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m14:24:28.886731 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff93c570130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff93c5701f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff93c5700d0>]}
+[0m14:24:28.887254 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-05-26 14:24:44.365410 | 2bb054c4-52d2-4de4-9396-4c505d46d581 ==============================
+[0m14:24:44.365410 [info ] [MainThread]: Running with dbt=1.4.6
+[0m14:24:44.367914 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/vscode/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m14:24:44.368284 [debug] [MainThread]: Tracking: tracking
+[0m14:24:44.373743 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff95a6afee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff95a6acc40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff95a6affd0>]}
+[0m14:24:44.392368 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff95a6acee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff95a6acb80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff95a6ac0d0>]}
+[0m14:24:44.392954 [debug] [MainThread]: Flushing usage events
+[0m14:24:44.486918 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Failed to read package: Runtime Error
+    no dbt_project.yml found at expected path /workspaces/aec_alh/dbt_packages/dbt_utils/dbt_project.yml
+
+Error encountered in /workspaces/aec_alh/dbt_packages/dbt_utils
