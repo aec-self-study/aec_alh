@@ -1473,3 +1473,241 @@ select * from renamed
 [0m14:49:57.958929 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff210b5cf10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff210b5dd20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff210b5e0b0>]}
 [0m14:49:57.959854 [debug] [MainThread]: Flushing usage events
 [0m14:49:58.085034 [debug] [MainThread]: Connection 'macro_generate_base_model' was properly closed.
+
+
+============================== 2023-05-27 14:14:06.001201 | 8305136a-449b-401f-b930-8d6b4a7270b3 ==============================
+[0m14:14:06.001201 [info ] [MainThread]: Running with dbt=1.4.6
+[0m14:14:06.010114 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/vscode/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'parse_only': False, 'which': 'compile', 'rpc_method': 'compile', 'indirect_selection': 'eager'}
+[0m14:14:06.010663 [debug] [MainThread]: Tracking: tracking
+[0m14:14:06.032899 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b9baacf40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b9baaf550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b9baacf10>]}
+[0m14:14:06.093114 [debug] [MainThread]: checksum: 0325e47f1211ebbdb24627f81d8289d705fdb573380364d07ab35982cb3d57cd, vars: {}, profile: None, target: None, version: 1.4.6
+[0m14:14:06.383121 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m14:14:06.383790 [debug] [MainThread]: Partial parsing: added file: coffee_shop_alh://models/coffee_shop/user_stitching.sql
+[0m14:14:06.384173 [debug] [MainThread]: Partial parsing: added file: coffee_shop_alh://models/coffee_shop/user_sessions.sql
+[0m14:14:06.457713 [debug] [MainThread]: 1699: static parser successfully parsed coffee_shop/user_stitching.sql
+[0m14:14:06.474391 [debug] [MainThread]: 1699: static parser successfully parsed coffee_shop/user_sessions.sql
+[0m14:14:06.490962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8305136a-449b-401f-b930-8d6b4a7270b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b9b986110>]}
+[0m14:14:06.500860 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8305136a-449b-401f-b930-8d6b4a7270b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b9b8dbf70>]}
+[0m14:14:06.501268 [info ] [MainThread]: Found 9 models, 12 tests, 0 snapshots, 0 analyses, 459 macros, 0 operations, 0 seed files, 7 sources, 0 exposures, 0 metrics
+[0m14:14:06.501709 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8305136a-449b-401f-b930-8d6b4a7270b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b9b8dbe80>]}
+[0m14:14:06.504844 [info ] [MainThread]: 
+[0m14:14:06.507015 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:14:06.508587 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_aec-students_dbt_alh'
+[0m14:14:06.509225 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:14:09.839588 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8305136a-449b-401f-b930-8d6b4a7270b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b9b8dbb50>]}
+[0m14:14:09.841062 [info ] [MainThread]: Concurrency: 8 threads (target='dev')
+[0m14:14:09.841665 [info ] [MainThread]: 
+[0m14:14:09.855470 [debug] [Thread-1 (]: Began running node model.coffee_shop_alh.customers
+[0m14:14:09.855798 [debug] [Thread-2 (]: Began running node model.coffee_shop_alh.stg_github_issue
+[0m14:14:09.856084 [debug] [Thread-3 (]: Began running node model.coffee_shop_alh.stg_github_issue_merged
+[0m14:14:09.856404 [debug] [Thread-4 (]: Began running node model.coffee_shop_alh.stg_github_pull_request
+[0m14:14:09.860192 [debug] [Thread-4 (]: Acquiring new bigquery connection 'model.coffee_shop_alh.stg_github_pull_request'
+[0m14:14:09.860516 [debug] [Thread-4 (]: Began compiling node model.coffee_shop_alh.stg_github_pull_request
+[0m14:14:09.856655 [debug] [Thread-5 (]: Began running node model.coffee_shop_alh.stg_github_repository
+[0m14:14:09.857348 [debug] [Thread-8 (]: Began running node test.coffee_shop_alh.source_not_null_coffee_shop_orders_id.734c497108
+[0m14:14:09.857973 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.coffee_shop_alh.customers'
+[0m14:14:09.858660 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.coffee_shop_alh.stg_github_issue'
+[0m14:14:09.859441 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.coffee_shop_alh.stg_github_issue_merged'
+[0m14:14:09.856886 [debug] [Thread-6 (]: Began running node model.coffee_shop_alh.user_stitching
+[0m14:14:09.867162 [debug] [Thread-6 (]: Acquiring new bigquery connection 'model.coffee_shop_alh.user_stitching'
+[0m14:14:09.867471 [debug] [Thread-6 (]: Began compiling node model.coffee_shop_alh.user_stitching
+[0m14:14:09.864871 [debug] [Thread-5 (]: Acquiring new bigquery connection 'model.coffee_shop_alh.stg_github_repository'
+[0m14:14:09.865521 [debug] [Thread-8 (]: Acquiring new bigquery connection 'test.coffee_shop_alh.source_not_null_coffee_shop_orders_id.734c497108'
+[0m14:14:09.871019 [debug] [Thread-8 (]: Began compiling node test.coffee_shop_alh.source_not_null_coffee_shop_orders_id.734c497108
+[0m14:14:09.865865 [debug] [Thread-1 (]: Began compiling node model.coffee_shop_alh.customers
+[0m14:14:09.886881 [debug] [Thread-1 (]: Writing injected SQL for node "model.coffee_shop_alh.customers"
+[0m14:14:09.857122 [debug] [Thread-7 (]: Began running node test.coffee_shop_alh.source_not_null_coffee_shop_customers_id.d265e0f7a0
+[0m14:14:09.864175 [debug] [Thread-4 (]: Writing injected SQL for node "model.coffee_shop_alh.stg_github_pull_request"
+[0m14:14:09.870294 [debug] [Thread-6 (]: Writing injected SQL for node "model.coffee_shop_alh.user_stitching"
+[0m14:14:09.888839 [debug] [Thread-6 (]: Timing info for model.coffee_shop_alh.user_stitching (compile): 2023-05-27 14:14:09.867679 => 2023-05-27 14:14:09.888759
+[0m14:14:09.889189 [debug] [Thread-6 (]: Began executing node model.coffee_shop_alh.user_stitching
+[0m14:14:09.883798 [debug] [Thread-8 (]: Writing injected SQL for node "test.coffee_shop_alh.source_not_null_coffee_shop_orders_id.734c497108"
+[0m14:14:09.866511 [debug] [Thread-3 (]: Began compiling node model.coffee_shop_alh.stg_github_issue_merged
+[0m14:14:09.887722 [debug] [Thread-7 (]: Acquiring new bigquery connection 'test.coffee_shop_alh.source_not_null_coffee_shop_customers_id.d265e0f7a0'
+[0m14:14:09.893110 [debug] [Thread-7 (]: Began compiling node test.coffee_shop_alh.source_not_null_coffee_shop_customers_id.d265e0f7a0
+[0m14:14:09.897617 [debug] [Thread-7 (]: Writing injected SQL for node "test.coffee_shop_alh.source_not_null_coffee_shop_customers_id.d265e0f7a0"
+[0m14:14:09.870690 [debug] [Thread-5 (]: Began compiling node model.coffee_shop_alh.stg_github_repository
+[0m14:14:09.866189 [debug] [Thread-2 (]: Began compiling node model.coffee_shop_alh.stg_github_issue
+[0m14:14:09.890028 [debug] [Thread-1 (]: Timing info for model.coffee_shop_alh.customers (compile): 2023-05-27 14:14:09.884069 => 2023-05-27 14:14:09.889945
+[0m14:14:09.892711 [debug] [Thread-3 (]: Writing injected SQL for node "model.coffee_shop_alh.stg_github_issue_merged"
+[0m14:14:09.888302 [debug] [Thread-4 (]: Timing info for model.coffee_shop_alh.stg_github_pull_request (compile): 2023-05-27 14:14:09.860731 => 2023-05-27 14:14:09.888208
+[0m14:14:09.893412 [debug] [Thread-8 (]: Timing info for test.coffee_shop_alh.source_not_null_coffee_shop_orders_id.734c497108 (compile): 2023-05-27 14:14:09.871248 => 2023-05-27 14:14:09.893338
+[0m14:14:09.889506 [debug] [Thread-6 (]: Timing info for model.coffee_shop_alh.user_stitching (execute): 2023-05-27 14:14:09.889429 => 2023-05-27 14:14:09.889453
+[0m14:14:09.901758 [debug] [Thread-5 (]: Writing injected SQL for node "model.coffee_shop_alh.stg_github_repository"
+[0m14:14:09.902090 [debug] [Thread-7 (]: Timing info for test.coffee_shop_alh.source_not_null_coffee_shop_customers_id.d265e0f7a0 (compile): 2023-05-27 14:14:09.893694 => 2023-05-27 14:14:09.902031
+[0m14:14:09.904747 [debug] [Thread-2 (]: Writing injected SQL for node "model.coffee_shop_alh.stg_github_issue"
+[0m14:14:09.905107 [debug] [Thread-1 (]: Began executing node model.coffee_shop_alh.customers
+[0m14:14:09.909385 [debug] [Thread-1 (]: Timing info for model.coffee_shop_alh.customers (execute): 2023-05-27 14:14:09.909318 => 2023-05-27 14:14:09.909332
+[0m14:14:09.905908 [debug] [Thread-3 (]: Timing info for model.coffee_shop_alh.stg_github_issue_merged (compile): 2023-05-27 14:14:09.890341 => 2023-05-27 14:14:09.905831
+[0m14:14:09.906284 [debug] [Thread-8 (]: Began executing node test.coffee_shop_alh.source_not_null_coffee_shop_orders_id.734c497108
+[0m14:14:09.908105 [debug] [Thread-6 (]: Finished running node model.coffee_shop_alh.user_stitching
+[0m14:14:09.911487 [debug] [Thread-6 (]: Began running node test.coffee_shop_alh.source_not_null_web_tracking_pageviews_id.8953365196
+[0m14:14:09.908918 [debug] [Thread-5 (]: Timing info for model.coffee_shop_alh.stg_github_repository (compile): 2023-05-27 14:14:09.898080 => 2023-05-27 14:14:09.908845
+[0m14:14:09.905556 [debug] [Thread-4 (]: Began executing node model.coffee_shop_alh.stg_github_pull_request
+[0m14:14:09.910186 [debug] [Thread-1 (]: Finished running node model.coffee_shop_alh.customers
+[0m14:14:09.913244 [debug] [Thread-1 (]: Began running node test.coffee_shop_alh.source_unique_coffee_shop_customers_id.33a28346d5
+[0m14:14:09.910760 [debug] [Thread-3 (]: Began executing node model.coffee_shop_alh.stg_github_issue_merged
+[0m14:14:09.911073 [debug] [Thread-8 (]: Timing info for test.coffee_shop_alh.source_not_null_coffee_shop_orders_id.734c497108 (execute): 2023-05-27 14:14:09.911001 => 2023-05-27 14:14:09.911015
+[0m14:14:09.908572 [debug] [Thread-7 (]: Began executing node test.coffee_shop_alh.source_not_null_coffee_shop_customers_id.d265e0f7a0
+[0m14:14:09.912159 [debug] [Thread-6 (]: Acquiring new bigquery connection 'test.coffee_shop_alh.source_not_null_web_tracking_pageviews_id.8953365196'
+[0m14:14:09.915946 [debug] [Thread-6 (]: Began compiling node test.coffee_shop_alh.source_not_null_web_tracking_pageviews_id.8953365196
+[0m14:14:09.912521 [debug] [Thread-5 (]: Began executing node model.coffee_shop_alh.stg_github_repository
+[0m14:14:09.920807 [debug] [Thread-5 (]: Timing info for model.coffee_shop_alh.stg_github_repository (execute): 2023-05-27 14:14:09.920733 => 2023-05-27 14:14:09.920748
+[0m14:14:09.921461 [debug] [Thread-5 (]: Finished running node model.coffee_shop_alh.stg_github_repository
+[0m14:14:09.914533 [debug] [Thread-3 (]: Timing info for model.coffee_shop_alh.stg_github_issue_merged (execute): 2023-05-27 14:14:09.914448 => 2023-05-27 14:14:09.914464
+[0m14:14:09.915234 [debug] [Thread-8 (]: Finished running node test.coffee_shop_alh.source_not_null_coffee_shop_orders_id.734c497108
+[0m14:14:09.912843 [debug] [Thread-4 (]: Timing info for model.coffee_shop_alh.stg_github_pull_request (execute): 2023-05-27 14:14:09.912748 => 2023-05-27 14:14:09.912765
+[0m14:14:09.923780 [debug] [Thread-4 (]: Finished running node model.coffee_shop_alh.stg_github_pull_request
+[0m14:14:09.924154 [debug] [Thread-4 (]: Began running node test.coffee_shop_alh.source_unique_github_issue_merged_issue_id.de4a64e7ff
+[0m14:14:09.921850 [debug] [Thread-5 (]: Began running node test.coffee_shop_alh.source_unique_coffee_shop_orders_id.76bb24edf7
+[0m14:14:09.925632 [debug] [Thread-5 (]: Acquiring new bigquery connection 'test.coffee_shop_alh.source_unique_coffee_shop_orders_id.76bb24edf7'
+[0m14:14:09.925949 [debug] [Thread-5 (]: Began compiling node test.coffee_shop_alh.source_unique_coffee_shop_orders_id.76bb24edf7
+[0m14:14:09.922590 [debug] [Thread-3 (]: Finished running node model.coffee_shop_alh.stg_github_issue_merged
+[0m14:14:09.922999 [debug] [Thread-8 (]: Began running node test.coffee_shop_alh.source_unique_github_issue_id.c5d93b6d78
+[0m14:14:09.915555 [debug] [Thread-7 (]: Timing info for test.coffee_shop_alh.source_not_null_coffee_shop_customers_id.d265e0f7a0 (execute): 2023-05-27 14:14:09.915478 => 2023-05-27 14:14:09.915491
+[0m14:14:09.934262 [debug] [Thread-7 (]: Finished running node test.coffee_shop_alh.source_not_null_coffee_shop_customers_id.d265e0f7a0
+[0m14:14:09.934632 [debug] [Thread-7 (]: Began running node test.coffee_shop_alh.source_unique_github_repository_id.2acefa4d18
+[0m14:14:09.910523 [debug] [Thread-2 (]: Timing info for model.coffee_shop_alh.stg_github_issue (compile): 2023-05-27 14:14:09.902318 => 2023-05-27 14:14:09.910453
+[0m14:14:09.935629 [debug] [Thread-2 (]: Began executing node model.coffee_shop_alh.stg_github_issue
+[0m14:14:09.935931 [debug] [Thread-2 (]: Timing info for model.coffee_shop_alh.stg_github_issue (execute): 2023-05-27 14:14:09.935862 => 2023-05-27 14:14:09.935875
+[0m14:14:09.932901 [debug] [Thread-3 (]: Began running node test.coffee_shop_alh.source_unique_github_pull_request_id.25ea38f0ea
+[0m14:14:09.933569 [debug] [Thread-8 (]: Acquiring new bigquery connection 'test.coffee_shop_alh.source_unique_github_issue_id.c5d93b6d78'
+[0m14:14:09.925035 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.coffee_shop_alh.source_unique_github_issue_merged_issue_id.de4a64e7ff'
+[0m14:14:09.938001 [debug] [Thread-4 (]: Began compiling node test.coffee_shop_alh.source_unique_github_issue_merged_issue_id.de4a64e7ff
+[0m14:14:09.935278 [debug] [Thread-7 (]: Acquiring new bigquery connection 'test.coffee_shop_alh.source_unique_github_repository_id.2acefa4d18'
+[0m14:14:09.943656 [debug] [Thread-7 (]: Began compiling node test.coffee_shop_alh.source_unique_github_repository_id.2acefa4d18
+[0m14:14:09.914205 [debug] [Thread-1 (]: Acquiring new bigquery connection 'test.coffee_shop_alh.source_unique_coffee_shop_customers_id.33a28346d5'
+[0m14:14:09.947912 [debug] [Thread-1 (]: Began compiling node test.coffee_shop_alh.source_unique_coffee_shop_customers_id.33a28346d5
+[0m14:14:09.937335 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.coffee_shop_alh.source_unique_github_pull_request_id.25ea38f0ea'
+[0m14:14:09.937688 [debug] [Thread-8 (]: Began compiling node test.coffee_shop_alh.source_unique_github_issue_id.c5d93b6d78
+[0m14:14:09.920453 [debug] [Thread-6 (]: Writing injected SQL for node "test.coffee_shop_alh.source_not_null_web_tracking_pageviews_id.8953365196"
+[0m14:14:09.936569 [debug] [Thread-2 (]: Finished running node model.coffee_shop_alh.stg_github_issue
+[0m14:14:09.943211 [debug] [Thread-4 (]: Writing injected SQL for node "test.coffee_shop_alh.source_unique_github_issue_merged_issue_id.de4a64e7ff"
+[0m14:14:09.958638 [debug] [Thread-4 (]: Timing info for test.coffee_shop_alh.source_unique_github_issue_merged_issue_id.de4a64e7ff (compile): 2023-05-27 14:14:09.938203 => 2023-05-27 14:14:09.958563
+[0m14:14:09.959002 [debug] [Thread-4 (]: Began executing node test.coffee_shop_alh.source_unique_github_issue_merged_issue_id.de4a64e7ff
+[0m14:14:09.951961 [debug] [Thread-1 (]: Writing injected SQL for node "test.coffee_shop_alh.source_unique_coffee_shop_customers_id.33a28346d5"
+[0m14:14:09.952331 [debug] [Thread-3 (]: Began compiling node test.coffee_shop_alh.source_unique_github_pull_request_id.25ea38f0ea
+[0m14:14:09.957116 [debug] [Thread-8 (]: Writing injected SQL for node "test.coffee_shop_alh.source_unique_github_issue_id.c5d93b6d78"
+[0m14:14:09.957678 [debug] [Thread-2 (]: Began running node test.coffee_shop_alh.source_unique_web_tracking_pageviews_id.680e110e5f
+[0m14:14:09.957966 [debug] [Thread-6 (]: Timing info for test.coffee_shop_alh.source_not_null_web_tracking_pageviews_id.8953365196 (compile): 2023-05-27 14:14:09.916227 => 2023-05-27 14:14:09.957892
+[0m14:14:09.965061 [debug] [Thread-6 (]: Began executing node test.coffee_shop_alh.source_not_null_web_tracking_pageviews_id.8953365196
+[0m14:14:09.965670 [debug] [Thread-6 (]: Timing info for test.coffee_shop_alh.source_not_null_web_tracking_pageviews_id.8953365196 (execute): 2023-05-27 14:14:09.965589 => 2023-05-27 14:14:09.965605
+[0m14:14:09.966309 [debug] [Thread-6 (]: Finished running node test.coffee_shop_alh.source_not_null_web_tracking_pageviews_id.8953365196
+[0m14:14:09.966679 [debug] [Thread-6 (]: Began running node model.coffee_shop_alh.monthly_customers
+[0m14:14:09.963995 [debug] [Thread-8 (]: Timing info for test.coffee_shop_alh.source_unique_github_issue_id.c5d93b6d78 (compile): 2023-05-27 14:14:09.952599 => 2023-05-27 14:14:09.963917
+[0m14:14:09.964726 [debug] [Thread-2 (]: Acquiring new bigquery connection 'test.coffee_shop_alh.source_unique_web_tracking_pageviews_id.680e110e5f'
+[0m14:14:09.968010 [debug] [Thread-2 (]: Began compiling node test.coffee_shop_alh.source_unique_web_tracking_pageviews_id.680e110e5f
+[0m14:14:09.965291 [debug] [Thread-1 (]: Timing info for test.coffee_shop_alh.source_unique_coffee_shop_customers_id.33a28346d5 (compile): 2023-05-27 14:14:09.948150 => 2023-05-27 14:14:09.965225
+[0m14:14:09.963422 [debug] [Thread-3 (]: Writing injected SQL for node "test.coffee_shop_alh.source_unique_github_pull_request_id.25ea38f0ea"
+[0m14:14:09.972824 [debug] [Thread-3 (]: Timing info for test.coffee_shop_alh.source_unique_github_pull_request_id.25ea38f0ea (compile): 2023-05-27 14:14:09.959703 => 2023-05-27 14:14:09.972746
+[0m14:14:09.973198 [debug] [Thread-3 (]: Began executing node test.coffee_shop_alh.source_unique_github_pull_request_id.25ea38f0ea
+[0m14:14:09.973586 [debug] [Thread-3 (]: Timing info for test.coffee_shop_alh.source_unique_github_pull_request_id.25ea38f0ea (execute): 2023-05-27 14:14:09.973495 => 2023-05-27 14:14:09.973515
+[0m14:14:09.967698 [debug] [Thread-8 (]: Began executing node test.coffee_shop_alh.source_unique_github_issue_id.c5d93b6d78
+[0m14:14:09.971987 [debug] [Thread-2 (]: Writing injected SQL for node "test.coffee_shop_alh.source_unique_web_tracking_pageviews_id.680e110e5f"
+[0m14:14:09.975075 [debug] [Thread-2 (]: Timing info for test.coffee_shop_alh.source_unique_web_tracking_pageviews_id.680e110e5f (compile): 2023-05-27 14:14:09.968212 => 2023-05-27 14:14:09.975001
+[0m14:14:09.972362 [debug] [Thread-1 (]: Began executing node test.coffee_shop_alh.source_unique_coffee_shop_customers_id.33a28346d5
+[0m14:14:09.975808 [debug] [Thread-1 (]: Timing info for test.coffee_shop_alh.source_unique_coffee_shop_customers_id.33a28346d5 (execute): 2023-05-27 14:14:09.975738 => 2023-05-27 14:14:09.975752
+[0m14:14:09.976445 [debug] [Thread-1 (]: Finished running node test.coffee_shop_alh.source_unique_coffee_shop_customers_id.33a28346d5
+[0m14:14:09.976833 [debug] [Thread-1 (]: Began running node test.coffee_shop_alh.not_null_customers_customer_id.5c9bf9911d
+[0m14:14:09.974298 [debug] [Thread-3 (]: Finished running node test.coffee_shop_alh.source_unique_github_pull_request_id.25ea38f0ea
+[0m14:14:09.974639 [debug] [Thread-8 (]: Timing info for test.coffee_shop_alh.source_unique_github_issue_id.c5d93b6d78 (execute): 2023-05-27 14:14:09.974558 => 2023-05-27 14:14:09.974588
+[0m14:14:09.975461 [debug] [Thread-2 (]: Began executing node test.coffee_shop_alh.source_unique_web_tracking_pageviews_id.680e110e5f
+[0m14:14:09.959311 [debug] [Thread-4 (]: Timing info for test.coffee_shop_alh.source_unique_github_issue_merged_issue_id.de4a64e7ff (execute): 2023-05-27 14:14:09.959231 => 2023-05-27 14:14:09.959245
+[0m14:14:09.967341 [debug] [Thread-6 (]: Acquiring new bigquery connection 'model.coffee_shop_alh.monthly_customers'
+[0m14:14:09.932474 [debug] [Thread-5 (]: Writing injected SQL for node "test.coffee_shop_alh.source_unique_coffee_shop_orders_id.76bb24edf7"
+[0m14:14:09.980498 [debug] [Thread-5 (]: Timing info for test.coffee_shop_alh.source_unique_coffee_shop_orders_id.76bb24edf7 (compile): 2023-05-27 14:14:09.926178 => 2023-05-27 14:14:09.980424
+[0m14:14:09.980878 [debug] [Thread-5 (]: Began executing node test.coffee_shop_alh.source_unique_coffee_shop_orders_id.76bb24edf7
+[0m14:14:09.977872 [debug] [Thread-3 (]: Began running node test.coffee_shop_alh.unique_customers_customer_id.c5af1ff4b1
+[0m14:14:09.978637 [debug] [Thread-8 (]: Finished running node test.coffee_shop_alh.source_unique_github_issue_id.c5d93b6d78
+[0m14:14:09.978963 [debug] [Thread-2 (]: Timing info for test.coffee_shop_alh.source_unique_web_tracking_pageviews_id.680e110e5f (execute): 2023-05-27 14:14:09.978868 => 2023-05-27 14:14:09.978880
+[0m14:14:09.982888 [debug] [Thread-2 (]: Finished running node test.coffee_shop_alh.source_unique_web_tracking_pageviews_id.680e110e5f
+[0m14:14:09.979995 [debug] [Thread-6 (]: Began compiling node model.coffee_shop_alh.monthly_customers
+[0m14:14:09.985537 [debug] [Thread-6 (]: Writing injected SQL for node "model.coffee_shop_alh.monthly_customers"
+[0m14:14:09.981172 [debug] [Thread-5 (]: Timing info for test.coffee_shop_alh.source_unique_coffee_shop_orders_id.76bb24edf7 (execute): 2023-05-27 14:14:09.981103 => 2023-05-27 14:14:09.981115
+[0m14:14:09.986406 [debug] [Thread-5 (]: Finished running node test.coffee_shop_alh.source_unique_coffee_shop_orders_id.76bb24edf7
+[0m14:14:09.981748 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.coffee_shop_alh.unique_customers_customer_id.c5af1ff4b1'
+[0m14:14:09.982161 [debug] [Thread-8 (]: Began running node model.coffee_shop_alh.pull_requests
+[0m14:14:09.987517 [debug] [Thread-8 (]: Acquiring new bigquery connection 'model.coffee_shop_alh.pull_requests'
+[0m14:14:09.947554 [debug] [Thread-7 (]: Writing injected SQL for node "test.coffee_shop_alh.source_unique_github_repository_id.2acefa4d18"
+[0m14:14:09.977462 [debug] [Thread-1 (]: Acquiring new bigquery connection 'test.coffee_shop_alh.not_null_customers_customer_id.5c9bf9911d'
+[0m14:14:09.986918 [debug] [Thread-3 (]: Began compiling node test.coffee_shop_alh.unique_customers_customer_id.c5af1ff4b1
+[0m14:14:09.987820 [debug] [Thread-8 (]: Began compiling node model.coffee_shop_alh.pull_requests
+[0m14:14:09.979659 [debug] [Thread-4 (]: Finished running node test.coffee_shop_alh.source_unique_github_issue_merged_issue_id.de4a64e7ff
+[0m14:14:09.988288 [debug] [Thread-6 (]: Timing info for model.coffee_shop_alh.monthly_customers (compile): 2023-05-27 14:14:09.983360 => 2023-05-27 14:14:09.988210
+[0m14:14:09.996556 [debug] [Thread-6 (]: Began executing node model.coffee_shop_alh.monthly_customers
+[0m14:14:09.989031 [debug] [Thread-7 (]: Timing info for test.coffee_shop_alh.source_unique_github_repository_id.2acefa4d18 (compile): 2023-05-27 14:14:09.943899 => 2023-05-27 14:14:09.988980
+[0m14:14:09.992906 [debug] [Thread-3 (]: Writing injected SQL for node "test.coffee_shop_alh.unique_customers_customer_id.c5af1ff4b1"
+[0m14:14:09.996023 [debug] [Thread-8 (]: Writing injected SQL for node "model.coffee_shop_alh.pull_requests"
+[0m14:14:09.996846 [debug] [Thread-6 (]: Timing info for model.coffee_shop_alh.monthly_customers (execute): 2023-05-27 14:14:09.996765 => 2023-05-27 14:14:09.996778
+[0m14:14:09.998512 [debug] [Thread-6 (]: Finished running node model.coffee_shop_alh.monthly_customers
+[0m14:14:09.997170 [debug] [Thread-7 (]: Began executing node test.coffee_shop_alh.source_unique_github_repository_id.2acefa4d18
+[0m14:14:09.997773 [debug] [Thread-3 (]: Timing info for test.coffee_shop_alh.unique_customers_customer_id.c5af1ff4b1 (compile): 2023-05-27 14:14:09.989260 => 2023-05-27 14:14:09.997699
+[0m14:14:09.988750 [debug] [Thread-1 (]: Began compiling node test.coffee_shop_alh.not_null_customers_customer_id.5c9bf9911d
+[0m14:14:09.999082 [debug] [Thread-7 (]: Timing info for test.coffee_shop_alh.source_unique_github_repository_id.2acefa4d18 (execute): 2023-05-27 14:14:09.999017 => 2023-05-27 14:14:09.999028
+[0m14:14:10.004384 [debug] [Thread-7 (]: Finished running node test.coffee_shop_alh.source_unique_github_repository_id.2acefa4d18
+[0m14:14:09.999765 [debug] [Thread-3 (]: Began executing node test.coffee_shop_alh.unique_customers_customer_id.c5af1ff4b1
+[0m14:14:10.003683 [debug] [Thread-1 (]: Writing injected SQL for node "test.coffee_shop_alh.not_null_customers_customer_id.5c9bf9911d"
+[0m14:14:09.999382 [debug] [Thread-8 (]: Timing info for model.coffee_shop_alh.pull_requests (compile): 2023-05-27 14:14:09.993188 => 2023-05-27 14:14:09.999312
+[0m14:14:10.005359 [debug] [Thread-8 (]: Began executing node model.coffee_shop_alh.pull_requests
+[0m14:14:10.004859 [debug] [Thread-3 (]: Timing info for test.coffee_shop_alh.unique_customers_customer_id.c5af1ff4b1 (execute): 2023-05-27 14:14:10.004777 => 2023-05-27 14:14:10.004790
+[0m14:14:10.006783 [debug] [Thread-3 (]: Finished running node test.coffee_shop_alh.unique_customers_customer_id.c5af1ff4b1
+[0m14:14:10.006117 [debug] [Thread-8 (]: Timing info for model.coffee_shop_alh.pull_requests (execute): 2023-05-27 14:14:10.006060 => 2023-05-27 14:14:10.006069
+[0m14:14:10.005782 [debug] [Thread-1 (]: Timing info for test.coffee_shop_alh.not_null_customers_customer_id.5c9bf9911d (compile): 2023-05-27 14:14:10.000024 => 2023-05-27 14:14:10.005708
+[0m14:14:10.007644 [debug] [Thread-8 (]: Finished running node model.coffee_shop_alh.pull_requests
+[0m14:14:10.007990 [debug] [Thread-1 (]: Began executing node test.coffee_shop_alh.not_null_customers_customer_id.5c9bf9911d
+[0m14:14:10.008507 [debug] [Thread-1 (]: Timing info for test.coffee_shop_alh.not_null_customers_customer_id.5c9bf9911d (execute): 2023-05-27 14:14:10.008436 => 2023-05-27 14:14:10.008450
+[0m14:14:10.009172 [debug] [Thread-1 (]: Finished running node test.coffee_shop_alh.not_null_customers_customer_id.5c9bf9911d
+[0m14:14:10.010934 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:14:10.011210 [debug] [MainThread]: Connection 'test.coffee_shop_alh.not_null_customers_customer_id.5c9bf9911d' was properly closed.
+[0m14:14:10.011450 [debug] [MainThread]: Connection 'test.coffee_shop_alh.source_unique_web_tracking_pageviews_id.680e110e5f' was properly closed.
+[0m14:14:10.011672 [debug] [MainThread]: Connection 'test.coffee_shop_alh.unique_customers_customer_id.c5af1ff4b1' was properly closed.
+[0m14:14:10.011889 [debug] [MainThread]: Connection 'test.coffee_shop_alh.source_unique_github_issue_merged_issue_id.de4a64e7ff' was properly closed.
+[0m14:14:10.012104 [debug] [MainThread]: Connection 'test.coffee_shop_alh.source_unique_coffee_shop_orders_id.76bb24edf7' was properly closed.
+[0m14:14:10.012316 [debug] [MainThread]: Connection 'model.coffee_shop_alh.pull_requests' was properly closed.
+[0m14:14:10.012550 [debug] [MainThread]: Connection 'model.coffee_shop_alh.monthly_customers' was properly closed.
+[0m14:14:10.012766 [debug] [MainThread]: Connection 'test.coffee_shop_alh.source_unique_github_repository_id.2acefa4d18' was properly closed.
+[0m14:14:10.014194 [debug] [MainThread]: Command end result
+[0m14:14:10.024315 [info ] [MainThread]: Done.
+[0m14:14:10.024899 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b9b8dba60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b9b8d9c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b9b8dbfa0>]}
+[0m14:14:10.025349 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-05-27 14:15:56.521607 | a3a3b5b2-56c3-4928-9a90-897438c908ad ==============================
+[0m14:15:56.521607 [info ] [MainThread]: Running with dbt=1.4.6
+[0m14:15:56.524633 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/vscode/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'macro': 'generate_base_model', 'args': '{"source_name": "web_tracking", "table_name": "pageviews"}', 'which': 'run-operation', 'rpc_method': 'run-operation', 'indirect_selection': 'eager'}
+[0m14:15:56.525216 [debug] [MainThread]: Tracking: tracking
+[0m14:15:56.535752 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f92daaacd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f92daaac250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f92daaaf6a0>]}
+[0m14:15:56.580488 [debug] [MainThread]: checksum: 0325e47f1211ebbdb24627f81d8289d705fdb573380364d07ab35982cb3d57cd, vars: {}, profile: None, target: None, version: 1.4.6
+[0m14:15:56.617711 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:15:56.618182 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:15:56.626574 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a3a3b5b2-56c3-4928-9a90-897438c908ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f92da925c00>]}
+[0m14:15:56.697911 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a3a3b5b2-56c3-4928-9a90-897438c908ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f92dc7c3dc0>]}
+[0m14:15:56.700054 [debug] [MainThread]: Acquiring new bigquery connection 'macro_generate_base_model'
+[0m14:15:56.709320 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:15:57.928121 [info ] [MainThread]: 
+
+with source as (
+
+    select * from {{ source('web_tracking', 'pageviews') }}
+
+),
+
+renamed as (
+
+    select
+        id,
+        visitor_id,
+        device_type,
+        timestamp,
+        page,
+        customer_id
+
+    from source
+
+)
+
+select * from renamed
+
+[0m14:15:57.929634 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f92da94fdc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f92da94ed70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f92da94eaa0>]}
+[0m14:15:57.930070 [debug] [MainThread]: Flushing usage events
+[0m14:15:58.042160 [debug] [MainThread]: Connection 'macro_generate_base_model' was properly closed.
