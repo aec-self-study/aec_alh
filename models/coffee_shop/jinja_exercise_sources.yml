@@ -1,0 +1,11 @@
+version: 2
+
+models: 
+  - name: obt_order_items
+    description: jinja exercise
+    columns: 
+      - name: customer_id
+        description: Primary key of the model
+        tests: 
+          - unique
+          - not_null
