@@ -4798,3 +4798,30 @@ group by 1;
 [0m14:59:17.746189 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
 [0m14:59:17.746862 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d7a5c7400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d7a5c5690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d7a5c73a0>]}
 [0m14:59:17.747264 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-06-29 15:08:52.928928 | 75578822-d7fa-4ac2-a2ff-4c0c8e629591 ==============================
+[0m15:08:52.928928 [info ] [MainThread]: Running with dbt=1.4.6
+[0m15:08:52.931573 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/vscode/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'deps', 'rpc_method': 'deps', 'indirect_selection': 'eager'}
+[0m15:08:52.931929 [debug] [MainThread]: Tracking: tracking
+[0m15:08:52.934348 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb16cbf9120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb16cbf9bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb16cbf9690>]}
+[0m15:08:52.935077 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-x6_pucza'
+[0m15:08:52.935488 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m15:08:53.077189 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m15:08:53.078115 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json
+[0m15:08:53.162489 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json 200
+[0m15:08:53.164700 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m15:08:53.238500 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m15:08:53.252916 [info ] [MainThread]: Installing dbt-labs/codegen
+[0m15:08:53.356447 [info ] [MainThread]:   Installed from version 0.9.0
+[0m15:08:53.357074 [info ] [MainThread]:   Updated version available: 0.10.0
+[0m15:08:53.357655 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '75578822-d7fa-4ac2-a2ff-4c0c8e629591', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb16d1304c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb16d131b70>]}
+[0m15:08:53.358163 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m15:08:53.500691 [info ] [MainThread]:   Installed from version 1.1.1
+[0m15:08:53.501529 [info ] [MainThread]:   Up to date!
+[0m15:08:53.502334 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '75578822-d7fa-4ac2-a2ff-4c0c8e629591', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb16d1337c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb16d131750>]}
+[0m15:08:53.502807 [info ] [MainThread]: 
+[0m15:08:53.503993 [info ] [MainThread]: Updates available for packages: ['dbt-labs/codegen']                 
+Update your versions in packages.yml, then run dbt deps
+[0m15:08:53.505002 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb16d1315d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb16d131690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb16d130f70>]}
+[0m15:08:53.505438 [debug] [MainThread]: Flushing usage events
