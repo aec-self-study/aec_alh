@@ -6,7 +6,7 @@
 
 select 
 order_id,
-{% for product_category in ['coffee beans', 'merch', 'brewing supplies'] %}
+{% for product_category in ['coffee_beans', 'merch', 'brewing_supplies'] %}
 sum(case when product_category = '{{product_category}}' then price end) as {{product_category}}_amount,
 {% endfor %}
 -- select
