@@ -3,7 +3,7 @@ with source as (
 
     select * from {{ source('web_tracking', 'pageviews') }}
 
-),
+), renamed as (
 
 SELECT
   id,

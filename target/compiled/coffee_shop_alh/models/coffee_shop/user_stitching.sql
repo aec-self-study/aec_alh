@@ -2,7 +2,7 @@ with source as (
 
     select * from `analytics-engineers-club`.`web_tracking`.`pageviews`
 
-),
+), renamed as (
 
 SELECT
   id,
